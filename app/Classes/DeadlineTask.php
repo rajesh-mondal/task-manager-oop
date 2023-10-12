@@ -2,8 +2,13 @@
 namespace app\Classes;
 
 use app\Classes\Task;
+use app\Traits\HasAssigneeTrait;
+use app\Interfaces\HasDueDateInterface;
+use app\Interfaces\HasStartDateInterface;
 
-class DeadlineTask extends Task {
+class DeadlineTask extends Task implements HasDueDateInterface, HasStartDateInterface {
+    use HasAssigneeTrait;
+
     protected $startDate;
     protected $dueDate;
 

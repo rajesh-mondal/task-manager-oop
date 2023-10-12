@@ -1,11 +1,11 @@
 <?php
 namespace app\Traits;
 
-trait HasAssigneeTrairt {
+trait HasAssigneeTrait {
     protected $assignees = [];
 
     public function addAssignee( $assignee ) {
-        $this->assignee = $assignee;
+        $this->assignees[] = $assignee;
     }
 
     public function getAssignees() {
